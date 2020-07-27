@@ -24,7 +24,7 @@ gem 'redis', '~> 4.0'
 # Use background processing
 gem 'sidekiq'
 gem 'devise'
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap', '~> 4.3.1'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
