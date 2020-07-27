@@ -244,3 +244,4 @@ CI（継続的インテグレーション）/CD（継続的デリバリー）環
 詳しくは下記を参照してください
 
 - [template_sample_rails_6の解説](https://github.com/dodonki1223/template_sample_rails_6/blob/master/documents/EXPLANATION.md)
+# book_hotel
