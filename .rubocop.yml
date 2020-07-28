@@ -25,6 +25,7 @@ AllCops:
     - config/environments/test.rb
     - config/initializers/wrap_parameters.rb
     - 'db/schema.rb'
+    - db/**/*
     - 'vendor/**/*'
     - 'node_modules/**/*'
     - config.ru
@@ -66,13 +67,11 @@ Style/StringLiterals:
 
 # https://rubocop.readthedocs.io/en/latest/cops_layout/#layoutlinelength
 Layout/LineLength:
-  Max: 120
+  Max: 150
 
 # https://rubocop.readthedocs.io/en/latest/cops_style/#stylefrozenstringliteralcomment
 Style/FrozenStringLiteralComment:
-  Exclude:
-    - config/initializers/assets.rb
-    - config/initializers/**/*
+     Enabled: false
 
 # https://rubocop.readthedocs.io/en/latest/cops_style/#styleblockcomments
 Style/BlockComments:
