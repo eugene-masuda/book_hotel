@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'pages/home'
+  devise_for :users
   root 'high_scores#index'
 
   resources :high_scores
