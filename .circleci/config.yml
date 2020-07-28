@@ -106,9 +106,6 @@ commands:
           name: Rubocop
           command: bundle exec rubocop --require rubocop-rspec -D -P
       - run:
-          name: Rails Best Practices
-          command: bundle exec rails_best_practices .
-      - run:
           name: Brakeman
           command: bundle exec brakeman
 
