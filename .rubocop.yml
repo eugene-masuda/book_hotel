@@ -102,3 +102,6 @@ RSpec/InstanceVariable:
 
 Rails/HasManyOrHasOneDependent:
   Enabled: false
+
+RSpec/EmptyExampleGroup:
+  Enabled: false
