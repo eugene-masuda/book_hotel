@@ -99,3 +99,6 @@ RSpec/MultipleExpectations:
 # https://rubocop-rspec.readthedocs.io/en/latest/cops_rspec/#rspecinstancevariable
 RSpec/InstanceVariable:
   Enabled: false
+
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
