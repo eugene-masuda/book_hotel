@@ -12,12 +12,12 @@
           <div class="row">
             <div class="col-md-offset-3 col-md-6">
               <!-- PHOTOS UPLOAD GOES HERE -->
-              <%= form_for @room, url: room_photos_path(@room), method: 'post', html: {multipart: true} do |f| %>
+              <%= form_for @room do |f| %>
                 <div class="row">
                   <div class="form-group">
                     <span class="btn btn-default btn-file text-babu">
-                      <i class="fa fa-cloud-upload" aria-hidden="true"></i> Select Photos
-                      <%= file_field_tag "images[]", type: :file, multiple: true %>
+                      Select Photos
+                      <%= f.file_field :images, multiple: true, class: 'form-control', required: true  %>
                     </span>
                   </div>
                 </div>
