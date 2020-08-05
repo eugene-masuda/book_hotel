@@ -47,13 +47,19 @@ class RoomsController < ApplicationController
     redirect_back(fallback_location: request.referer)
   end
 
+  def delete_image_attachment
+    @images = ActiveStorage::Attachment.find(params[:id])
+    @images.purge
+    redirect_back(fallback_location: request.referer)
+  end
+
   private
 
   def set_room
     @room = Room.find(params[:id])
   end
 
-  def authorised?
+  def is_authorised
     redirect_to root_path, alert: "You don't have permission" unless current_user.id == @room.user_id
   end
 

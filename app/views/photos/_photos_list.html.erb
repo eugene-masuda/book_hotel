@@ -5,8 +5,13 @@
       <div class="col-md-4">
         <div class="panel panel-default">
           <div class="panel-heading preview">
-            <%= image_tag image %>
+            <%= link_to image_tag image %>
           </div>
+          <span class="pull-right">
+            <%= link_to delete_image_attachment_room_path(image), :method => :get,  data: {confirm: "Are you sure?"} do %>
+              <i class="fa fa-trash-o fa-lg" aria-hidden="true"></i>
+            <% end %>
+          </span>
         </div>
       </div>
     <% end %>
