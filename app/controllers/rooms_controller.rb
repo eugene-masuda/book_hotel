@@ -20,8 +20,7 @@ class RoomsController < ApplicationController
     end
   end
 
-  def show
-  end
+  def show; end
 
   def listing; end
 
@@ -30,7 +29,7 @@ class RoomsController < ApplicationController
   def description; end
 
   def photo_upload
-    @photos = @room.photos
+    @photos = @room.images
   end
 
   def amenities; end
@@ -39,8 +38,7 @@ class RoomsController < ApplicationController
 
   def update
     new_params = room_params
-    new_params = room_params.merge(active: true) if is_ready_room
-
+    new_params = room_params.merge(active: true)
     if @room.update(new_params)
       flash[:notice] = 'Saved...'
     else
@@ -55,7 +53,7 @@ class RoomsController < ApplicationController
     @room = Room.find(params[:id])
   end
 
-  def is_authorised
+  def authorised?
     redirect_to root_path, alert: "You don't have permission" unless current_user.id == @room.user_id
   end
 

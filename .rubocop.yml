@@ -105,3 +105,6 @@ Rails/HasManyOrHasOneDependent:
 
 RSpec/EmptyExampleGroup:
   Enabled: false
+
+Lint/UselessAssignment:
+  Enabled: false
