@@ -1,5 +1,4 @@
 class PhotosController < ApplicationController
-  before_action :set_room, except: [:index, :new, :create,:delete_image_attachment]
   def create
     @room = Room.find(params[:room_id])
 
